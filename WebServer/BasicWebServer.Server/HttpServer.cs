@@ -64,7 +64,8 @@ Content-Length: {contentLength}
 
     }
 
-    private string ReadRequest(NetworkStream networkStream)
+    
+    public string ReadRequest(NetworkStream networkStream)
     {
 
         var bufferLength = 1024;
@@ -79,6 +80,7 @@ Content-Length: {contentLength}
             requestBuilder.Append(Encoding.UTF8.GetString(buffer, 0, bytesRead));
 
         }
+        
         while (networkStream.DataAvailable);
 
         return requestBuilder.ToString();
