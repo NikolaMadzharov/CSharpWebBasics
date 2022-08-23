@@ -13,12 +13,12 @@ public class HeaderCollection:IEnumerable<Header>
 
 
     public void Add(string name, string value)
-    {
-        var header = new Header(name, value);
+    => this.headers[name] = new Header(name, value);
+   
 
-        this.headers.Add(name, header);
+    public string this[string name] => this.headers[name].Value;
 
-    }
+    public bool Contains(string name) => this.headers.ContainsKey(name);
 
     public IEnumerator<Header> GetEnumerator() => this.headers.Values.GetEnumerator();
     
