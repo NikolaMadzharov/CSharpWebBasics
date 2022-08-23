@@ -2,8 +2,8 @@
 
 public class TextResponse:ContentResponse
 {
-    public TextResponse(string content, string contentType)
-        : base(content, contentType)
+    public TextResponse(string text)
+        : base(text , ContentType.PlainText)
     {
     }
 }
