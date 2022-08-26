@@ -13,6 +13,7 @@ public class ContentResponse:Response
         Guard.AgainstNull(content);
         Guard.AgainstNull(contentType);
 
+
         this.PreRenderAction = preRenderAction;
 
         this.Headers.Add(Header.ContentType, contentType);
