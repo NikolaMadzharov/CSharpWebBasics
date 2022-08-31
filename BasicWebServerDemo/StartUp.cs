@@ -12,10 +12,7 @@ public class Startup
 
 
 
-    private const string DownloadForm = @"<form action='/Content' method='POST'>
-   <input type='submit' value ='Download Sites Content' /> 
-</form>";
-
+    
     private const string FileName = "content.txt";
 
 
